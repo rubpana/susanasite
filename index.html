@@ -1,9 +1,19 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>SUSANA EL NAGAR GIMENEZ - Mi espacio</title>
         <style>
+            body, html {
+                width: 100%;
+                height: 100%;
+            }
+            div {
+                box-sizing: border-box;
+            }
             body {
-                background-color: rgba(230, 236, 240, 0.2);
+                background-color: white;
                 margin: 0;
                 font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             }
@@ -12,130 +22,243 @@
                 height: 200px;
                 background-position: 50% 53%;
                 background-size: cover;
+                height: 100%;
+                width: 100%;
             }
             #header p {
+                position: relative;
+                top: 25%;
                 color: white;
-                float: right;
-                padding-top: 140px;
-                padding-right: 30px;
-                padding-left: 30px;
+                text-align: center;
                 line-height: 60px;
-                font-size: 35px;
+                font-size: 40px;
                 margin: 0;
                 font-family: Helvetica, sans-serif;
                 font-weight: bold;
-            }
-            .section {
-                max-width: 1000px;
-                background-color: white;
-                margin: 32px auto 32px;
-                border: 1px solid #e6e6e6;
-                padding: 16px 32px;
+                transform: translateY(-50%);
             }
 
-            .section p.image {
-                text-align: center;
+            #header p.subtitle {
+                font-size: 25px;
+                font-weight: 700;
+                padding-top: 0;
+            }
+
+            .header-buttons {
+                position: absolute;
+                top: 75%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .section {
+                padding: 3% 15% 5% 15%;
             }
 
             .section p.title {
-                text-align: center;
                 font-family: Helvetica, sans-serif;
                 font-weight: 700;
                 font-size: 26px;
-                letter-spacing: 3px;
+                border-left: 5px solid #ff4081;
+                padding-left: 10px;
             }
 
-            .section div.content {
-                text-align: center;
+            p.title-description {
                 color: #657786;
             }
-            
-            .section hr {
-                margin-left: 16px;
-                margin-right: 16px;
-            }
 
-            .section .scratch a {
-                font-size: 22px;
+            p.title-description strong {
                 font-weight: bold;
-                color: #666;
+            }
+            
+            .columns {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
             }
 
-            .section .scratch div {
+            .columns .column {
+                margin-bottom: 20px;
+            }
+
+            #introduction .column {
+                padding-left: 7%;
+                padding-right: 32px;
+                min-width: 200px;
+            }
+
+            .columns.two-columns .column {
+                width: 50%;
+            }
+
+            .columns.three-columns .column {
+                width: 31%;
+            }
+
+            .columns .column p:first-child {
+                margin-top: 0;
+            }
+
+            .column.teacher-image {
+                background-image: url(http://i67.tinypic.com/2m4ax6h.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            #scratch-presentation {
+                background-color: #ff4081;
+                color: white;
+            }
+
+            #scratch-presentation .column {
+                padding: 32px 7% 32px 7%;
+                margin-bottom: 0;
+            }
+
+            #scratch-presentation p.title-description {
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.7);
+                line-height: 22px;
+            }
+
+            .column p.title {
+                font-family: Helvetica, sans-serif;
+                font-weight: 700;
+                font-size: 20px;
+            }
+
+            .column.scratch-image {
+                background-image: url(http://i67.tinypic.com/2hzss9i.png);
+                background-size: cover;
+                background-position: center;
+                min-height: 220px;
+            }
+
+            .column.scratch {
+                border: 4px solid #CFD5D8;
+                border-radius: 3px;
+                min-height: 25%;
+                padding: 20px;
+                min-width: 200px;
+            }
+
+            .scratch a {
+                font-weight: 600;
+                color: black;
+            }
+
+            .scratch div {
                 font-size: 14px;
                 color: #657786;
                 padding-top: 8px;
                 padding-bottom: 10px;
+                line-height: 20px;
             }
+
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .button {
+                display: inline-block;
+                background-color: rgba(255, 64, 129, 0.8);
+                border: 0.55px solid rgba(255, 64, 129, 1);
+                border-radius: 5px;
+                color: white;
+                text-decoration: none;
+                padding: 10px;
+                margin-right: 32px;
+                font-weight: normal;
+                font-size: 14px;
+                min-width: 110px;
+                text-align: center;
+                font-family: Helvetica, sans-serif;
+            }
+
         </style>
     </head>
     <body>
-        <div id="header">
-            <p>Susana El Nagar Gim&eacute;nez
-            </p>
+        <div class="header-buttons buttons">
+            <a class="button" href="#introduction">PRESENTACIÓN</a>
+            <a class="button" href="#scratch-presentation">SCRATCH</a>
         </div>
-        <div class="section">
-            <p class="image">&nbsp;<img alt="Resultat dimatges de fotos educacion y tic" src="http://3.bp.blogspot.com/-bKKv2XE_Fms/WORBy9htfFI/AAAAAAAARcU/iHQFYhbzNs88te02ZXAPK09x7gTHG4pGgCK4B/s1600/logochico-blog.png" class="irc_mi" height="100" />
-            </p>
+        <div id="header">
+            <p>SUSANA EL NAGAR GIMÉNEZ</p>
+            <p class="subtitle">Estudiante 4º Magisterio - TICS</p>
+        </div>
 
-            <p class="title">MI ESPACIO WEB</p>
-            <div>
-                <p>Bienvenidos, soy Susana El Nagar Gim&eacute;nez, estudiante de 4&ordm; de Magisterio de Educaci&oacute;n Primaria. Desde el a&ntilde;o pasado estoy cursando la menci&oacute;n TIC&rsquo;s la cual es muy provechosa puesto que podemos usar las nuevas tecnolog&iacute;as en el aula siendo esto algo muy atractivo para el alumnado.
-                </p>
-                <p>En este espacio web, os ir&eacute; dejando parte de los trabajos que realicemos con algunas herramientas educativas.
-                </p>
-                <p>&nbsp;&iexcl;Espero que lo aprovech&eacute;is y os guste tanto como a m&iacute;!&nbsp;
-                </p>
-                <p style="margin-bottom: 0;">&nbsp;
-                </p>
+        <div id="introduction" class="section">
+            <p class="title">Mi espacio</p>
+            <div class="columns two-columns">
+                <div class="column teacher-image"></div>
+                <div class="column">
+                    <p class="title-description">Bienvenidos, soy <strong>Susana El Nagar Gim&eacute;nez</strong>, estudiante de 4&ordm; de Magisterio de Educaci&oacute;n Primaria.</p>
+                    <p class="title-description">Desde el a&ntilde;o pasado estoy cursando la menci&oacute;n TIC&rsquo;s la cual es muy provechosa puesto que podemos usar las nuevas tecnolog&iacute;as en el aula siendo esto algo muy atractivo para el alumnado.</p>
+                    <p class="title-description"> En este espacio web, os ir&eacute; dejando parte de los trabajos que realicemos con algunas herramientas educativas. nbsp;&iexcl; Espero que lo aprovech&eacute;is y os guste tanto como a m&iacute;!&nbsp;</p>
+                </div>
             </div>
+        </div>
 
-            <hr/>
+        <div id="scratch-presentation">
+            <div class="columns two-columns">
+                <div class="column">
+                    <p class="title">SCRATCH</p>
+                    <p class="title-description">Lenguaje de programación visual utilizado para crear fácilmente animaciones, juegos educativos, etc. A continuación, os presento mis proyectos con la herramienta Scratch. ¡Visita los enlaces!</p>
+                </div>
+                <div class="column scratch-image"></div>
+            </div>
+        </div>
+
+        <div id="scratches" class="section">
 
             <p class="title">MIS PROYECTOS CON SCRATCH</p>
-            <!--Scratch project-->
-            <div class="scratch">
-                <a target="_blank" href="Tarea 3.html">Tarea 3: Cuadrado embebido</a>
-                <div></div>
+            <div class="columns three-columns">
+                <!--Scratch project-->
+                <div class="column scratch">
+                    <a target="_blank" href="Tarea 3.html">Tarea 3: Cuadrado embebido</a>
+                    <div>Consiste en encontrar la programación correcta para que el sprite nos dibuje un cuadrado.</div>
+                </div>
+                <!--Scratch project-->
+                <!--Scratch project-->
+                <div class="column scratch">
+                    <a target="_blank" href="Tarea4.html">Tarea 4: ¡Se mueve!</a>
+                    <div>En la siguiente tarea programaremos el sprite para que recorra todo el espacio de izquierda a derecha y arriba y abajo con las teclas del teclado.</div>
+                </div>
+                <!--Scratch project-->
+                <!--Scratch project-->
+                <div class="column scratch">
+                    <a target="_blank" href="Tarea5.html">Tarea 5: El juego de dibujar</a>
+                    <div>En esta aumenta un poco la complejidad, pues hemos añadido que el sprite, además de recorrer el espacio, deje un rastro en diferentes colores.</div>
+                </div>
+                <!--Scratch project-->
+                <!--Scratch project-->
+                <div class="column scratch">
+                    <a target="_blank" href="Tarea6.html">Tarea 6: El robocop con loops</a>
+                    <div>Esta tarea consiste en programar las figuras que componen este robot (pentagono, cuadrados, círculos...). Poniendo tantos sprites como formas tenga la figura y situándolos en el sitio correspondiente para que se dibuje correctamente.</div>
+                </div>
+                <!--Scratch project-->
+                <!--Scratch project-->
+                <div class="column scratch">
+                    <a target="_blank" href="Tarea 7.html">Tarea 7: Pezqueñines</a>
+                    <div>En esta tarea hemos intentado profundizar más en cómo dibujar objetos y poner el fondo. Esto puede sustituir al uso del sprite y que el alumnado se customize su propio personaje.</div>
+                </div>
+                <!--Scratch project-->
+                <!--Scratch project-->
+                <div class="column scratch">
+                    <a target="_blank" href="Tarea 8.html">Tarea 8: El juego de la deportista y el ratón</a>
+                    <div>En esta tarea hemos utilizado los bloques “repetir hasta” y por ello hemos creado el juego de la deportista cazando al ratón. En este caso, hemos  usado dos sprites, el jugador debe prestar mayor atención al sprite del ratón por la pantalla para evitar ser capturado por la deportista. También, hemos añadido un poco de texto.</div>
+                </div>
+                <!--Scratch project-->
+                <!--Scratch project-->
+                <div class="column scratch">
+                    <a target="_blank" href="Tarea 9.html">Tarea 9: El juego de comer manzanas</a>
+                    <div>En esta tarea hemos usado los bloques de condiciones “si...” para crear el juego de que un gato o cualquier otro sprite se come x manzanas. Se utiliza la función “duplicar” para poner las manzanas y variables para contabilizar las manzanas que el  sprite se ha comido.</div>
+                </div>
+                <!--Scratch project-->
             </div>
-            <!--Scratch project-->
-            <!--Scratch project-->
-            <div class="scratch">
-                <a target="_blank" href="Tarea4.html">Tarea 4: ¡Se mueve!</a>
-                <div></div>
-            </div>
-            <!--Scratch project-->
-            <!--Scratch project-->
-            <div class="scratch">
-                <a target="_blank" href="Tarea5.html">Tarea 5: El juego de dibujar</a>
-                <div></div>
-            </div class="scratch">
-            <!--Scratch project-->
-            <!--Scratch project-->
-            <div class="scratch">
-                <a target="_blank" href="Tarea6.html">Tarea 6: El robocop con loops</a>
-                <div></div>
-            </div>
-            <!--Scratch project-->
-            <!--Scratch project-->
-            <div class="scratch">
-                <a target="_blank" href="Tarea 7.html">Tarea 7: Pezqueñines</a>
-                <div></div>
-            </div>
-            <!--Scratch project-->
-            <!--Scratch project-->
-            <div class="scratch">
-                <a target="_blank" href="Tarea 8.html">Tarea 8: El juego de la deportista y el ratón</a>
-                <div></div>
-            </div>
-            <!--Scratch project-->
-            <!--Scratch project-->
-            <div class="scratch">
-                <a target="_blank" href="Tarea 9.html">Tarea 9: El juego de comer manzanas</a>
-                <div></div>
-            </div>
-            <!--Scratch project-->
 
         </div>
+
     </body>
 </html>
